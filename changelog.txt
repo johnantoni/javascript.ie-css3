@@ -1,0 +1,49 @@
+IE-CSS3.js - change log
+=======================
+
+
+v0.9.4b
+-------
+  
+ * NEW - added support for :hover (for IE 5.5 - 6) and :focus (for IE 5.5 - 7)
+ * NEW - added support for ::first-child and ::first-letter (suggested by Philip Renich)
+ * NEW - @import rules now honor the <base> href if its specified (reported by Andrea and Tim)
+ * BUG - various minor bug fixes 
+ * BUG - style sheets without href values shouldn't get parsed (reported by Jeff Smith)
+ * BUG - remotely hosted style sheets are now ignored when used in @imports
+
+
+
+v0.9.3b
+-------
+
+ * No longer dependent on DOMAssistant.
+ * Auto-detects best suited selector library from these:
+   - DOMAssistant (recommended)
+   - NWmatcher
+   - Prototype
+   - YUI 2
+   - MooTools
+   - Sizzle / jQuery
+ * NEW - pseudo selectors :enabled, :disabled, :checked and :root.
+ * BUG - Fixed IE 5.5/6 issue with illegal character in replacement class name.
+ * BUG - Fixed extra spaces issue with modified class names.
+ * BUG - Stopped triggering a DOM redraw when there are no className changes
+ * Dynamical building of CSS_PSEUDOS regexp based on IE version so we only patch whats needed.
+ * XHR compatability test (reported from twitter.com/kangax).
+ * Reworked DOMLoaded detection.
+
+ 
+
+v0.9.2b
+-------
+
+ * CSS parser updated to crawl @import statements (suggested by Andy "Malarkey" Clarke). 
+ * @font rules support.
+ 
+
+
+v0.9.1b
+-------
+
+ * Public beta release.
